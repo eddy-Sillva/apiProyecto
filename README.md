@@ -2,7 +2,11 @@ Api rest de calculadora programa creado por:
 Luis Alberto Colin Zuñiga
 Gina Jazmin Acosta Duran
 Edwin Jesus Silva Escutia
+
+instale todas las dependencias necesarias con la instruccion npm install
+
 Nota: todas las peticiones post se ejecutan desde postman en el apartado boy-raw-json
+
 --Rutas--
 Suma, Resta, Multiplicacion, Division peticion get por medio de query: Nombre de las variables del query obligatorias (num1,num2)
 http://localhost:8080/api/calculadora
@@ -40,3 +44,9 @@ ejemplo
 {
     "hexadecimal":"5"
 }
+
+repositorio de github https://github.com/eddy-Sillva/apiProyecto
+
+en caso de tener git puede ejecutar la siguiente instruccion desde la termina de visual estudio code para clonar el proyecto
+
+git clone https://github.com/eddy-Sillva/apiProyecto.git
