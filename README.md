@@ -45,7 +45,7 @@ ejemplo
     "hexadecimal":"5"
 }
 
-repositorio de github https://github.com/eddy-Sillva/apiProyecto
+repositorio de github https://github.com/eddy-Sillva/apiProyecto  repositorio actualmente se encuentra en privado
 
 en caso de tener git puede ejecutar la siguiente instruccion desde la termina de visual estudio code para clonar el proyecto
 

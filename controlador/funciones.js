@@ -90,11 +90,54 @@ const hexadecimalBinario=(req,res=Response)=>{
     res.json(json);
 }
 
+const getRaiz = (req, res=response)=>{
+    let {num} = req.query;
+    num = Math.sqrt(num, 2);
+    if (!isNaN(num)) {
+        res.json({num});
+    }else{
+        res.json({"Error" : "Error, ingresa un valor numerico para sacar raiz cuadrada"});
+    }
+}
+const getPotencia = (req, res=response)=>{
+    let {num, exponente} = req.query;
+    let base = Math.pow(num, exponente);
+    if (!isNaN(base)) {
+        res.json({base});
+    }else{
+        res.json({"Error" : "Error, ingresa un valor numerico para sacar la potencia"});
+    }
+}
+
+const getDecimalToHexadecimal = (req, res=response)=>{
+    let {num} = req.body;
+    if (!isNaN(num)) {
+        num = num.toString(16);
+        res.json({num});
+    }else{
+        res.json({"Error" : "Error, ingresa un numero Decimal para sacar el Hexadecimal"});
+    }
+}
+
+const getHexadecimalToDecimal = (req, res=response)=>{
+    let {num} = req.body;
+    num = parseInt(num, 16);
+    if (!isNaN(num)) {
+        res.json({num});
+    }else{
+        res.json({"Error" : "Error, ingresa un numero Hexadecimal para sacar Decimal"});
+    }
+}
+
 module.exports ={
     calculadora,
     decimalBinario,
     binarioDecimal,
     porsentaje,
     binarioHexadecimal,
-    hexadecimalBinario
+    hexadecimalBinario,
+    getRaiz,
+    getPotencia,
+    getDecimalToHexadecimal,
+    getHexadecimalToDecimal
 }

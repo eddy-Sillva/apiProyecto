@@ -1,5 +1,6 @@
 const {Router} =require('express');
-const{calculadora,decimalBinario,binarioDecimal,porsentaje,binarioHexadecimal,hexadecimalBinario}=require('../controlador/funciones')
+const{calculadora,decimalBinario,binarioDecimal,porsentaje,binarioHexadecimal,hexadecimalBinario,
+getRaiz,getPotencia,getDecimalToHexadecimal,getHexadecimalToDecimal}=require('../controlador/funciones')
 const rutas=Router();
 //suma resta multiplicacio y division
 rutas.get("/calculadora",calculadora);
@@ -13,4 +14,8 @@ rutas.get("/getPorcentaje",porsentaje)
 rutas.post("/binToHex",binarioHexadecimal)
 //Hexadecimal a binario
 rutas.post("/hexToBin",hexadecimalBinario)
+rutas.get("/raiz", getRaiz);
+rutas.get("/potencia", getPotencia);
+rutas.post("/decimal-hexadecimal", getDecimalToHexadecimal);
+rutas.post("/hexadecimal-decimal", getHexadecimalToDecimal);
 module.exports =rutas;
