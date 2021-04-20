@@ -37,7 +37,7 @@ const binarioDecimal=(req,res=response) =>{
     }
 }
 
-const porsentaje=(req,res=response) =>{
+const getPorcentaje=(req,res=response) =>{
     var numero = parseInt(req.query.num);
         var porcentaje = parseInt(req.query.porcent);
         if(!isNaN(numero) && !isNaN(porcentaje)){
@@ -53,7 +53,7 @@ const porsentaje=(req,res=response) =>{
         }
 }
 
-const binarioHexadecimal=(req,res=response) => {
+const binarioToHexadecimal=(req,res=response) => {
     let json;
         let numeroBinario = req.body.binario;
         let patron = new RegExp('\\b^[0-1]+$\\b','g');
@@ -73,7 +73,7 @@ const binarioHexadecimal=(req,res=response) => {
     }
 }
 
-const hexadecimalBinario=(req,res=Response)=>{
+const hexadecimalToBinario=(req,res=Response)=>{
     let json;
         let numeroHexadecimal = req.body.hexadecimal;
         let patron = new RegExp("\\b^[0-9a-f]+$\\b",'ig');
